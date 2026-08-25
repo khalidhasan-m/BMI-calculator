@@ -4,7 +4,7 @@ A responsive BMI calculator built with **plain HTML, CSS, and JavaScript**. It r
 
 ## Use
 
-Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root. Switching between **Metric** and **Imperial** converts entered height and weight values, then clears the previous BMI result for recalculation in the active system. The language selector supports **English, Spanish, French, and Bangla**, and remembers the selected language in the browser.
+Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root. Switching between **Metric** and **Imperial** converts entered height and weight values, then clears the previous BMI result for recalculation in the active system. The language selector remembers the selected language in the browser.
 
 ## Features
 
@@ -15,7 +15,8 @@ Open `index.html` in any modern browser. The calculator runs directly from the t
 | Local history | Keeps the eight newest calculations in the browser’s `localStorage`; no history is sent anywhere. |
 | Result-card download | Creates a PNG card from the current calculation using the browser’s Canvas API. |
 | Dark mode | Includes a persisted light/dark preference using `localStorage`. |
-| Localization | Provides English, Spanish, French, and Bangla UI translations, including results, validation feedback, history labels, dates, PNG cards, and accessible labels. Bangla uses Noto Sans Bengali for readable Bengali typography. |
+| Localization | Provides natural, user-facing English, Spanish, French, and Bangla language options. Each locale covers interface labels, input help, validation feedback, BMI categories, results, history, localized dates, accessible labels, and PNG result cards. |
+| Bangla typography | Uses Noto Sans Bengali for Bengali interface text so Bangla remains readable in the header, calculator, results, history, and exported card. |
 | Responsive layout | Adapts the editorial two-column view for small screens. |
 
 ## Files
@@ -26,6 +27,12 @@ Open `index.html` in any modern browser. The calculator runs directly from the t
 ├── style.css   # Visual design, responsive layout, and dark mode
 └── app.js      # BMI logic, local history, PNG export, and interactions
 ```
+
+## Languages
+
+The calculator ships with **English**, **Español**, **Français**, and **বাংলা**. Changing the language updates the visible interface and dynamic content immediately, while keeping calculations and saved BMI records on the device. The selected language is stored locally in the browser, along with the selected color theme and calculation history.
+
+> The category names and supporting descriptions are written for everyday use. They explain the adult BMI screening bands but do not provide a medical diagnosis.
 
 ## Calculation
 
