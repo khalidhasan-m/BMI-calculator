@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="theme-color" content="#315D4D" />
+    <meta name="description" content="A private BMI calculator with saved history, image result cards, and dark mode." />
+    <link rel="icon" type="image/png" href="/manus-storage/vital-atelier-logo_398229d3.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vital Measure — BMI Calculator</title>
+  </head>
+  <body>
+    <main class="vital-app">
+      <div class="ambient-shape ambient-shape-one" aria-hidden="true"></div><div class="ambient-shape ambient-shape-two" aria-hidden="true"></div>
+      <section class="intro-rail" aria-label="About BMI">
+        <header class="rail-topbar"><div class="brand-lockup"><img src="/manus-storage/vital-atelier-logo_398229d3.png" alt="Vital Measure" class="brand-mark" /><span>VITAL <em>measure</em></span></div><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Enable dark mode"><span aria-hidden="true">☾</span><b>Dark</b></button></header>
+        <div class="intro-copy"><p class="eyebrow"><span></span> Body composition tool</p><h1>Find your number.<br />Keep the context.</h1><p class="intro-summary">Calculate your body mass index using your height and weight, then see how it sits within the standard adult range.</p></div>
+        <div class="still-life-frame" aria-hidden="true"><img src="/manus-storage/vital-atelier-wellness-still-life_733a3cd9.jpg" alt="" /><span class="photo-label">A small measure<br />of everyday wellbeing</span></div>
+        <div class="rail-footnote"><span class="info-symbol">i</span><p>BMI is a screening measure, not a medical diagnosis. It is intended for adults aged 20 and over.</p></div>
+      </section>
+      <section class="calculator-spread" aria-label="BMI calculator">
+        <div class="topline"><p class="edition-label">Personal health field notes <span>01 / 01</span></p><div class="sun-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+        <div class="calculator-header"><div><p class="eyebrow"><span></span> Your calculation</p><h2>Body mass index</h2></div><button class="quiet-reset" id="reset-button" type="button" aria-label="Reset calculator"><span>↻</span> Reset</button></div>
+        <div class="calculator-grid">
+          <div class="form-panel">
+            <div class="unit-selector" aria-label="Choose measurement system"><button class="unit-button selected" type="button" data-unit="metric" aria-pressed="true">Metric <small>cm / kg</small></button><button class="unit-button" type="button" data-unit="imperial" aria-pressed="false">Imperial <small>ft / in / lb</small></button></div>
+            <form id="bmi-form" novalidate>
+              <div class="field-stack" id="metric-fields"><label class="measure-field"><span class="field-icon">↕</span><span class="field-copy"><b>Height</b><small>How tall are you?</small></span><input id="height-cm" inputmode="decimal" type="number" min="80" max="250" step="0.1" placeholder="170" aria-label="Height in centimetres" /><em>cm</em></label><label class="measure-field"><span class="field-icon">⌁</span><span class="field-copy"><b>Weight</b><small>Your current weight</small></span><input id="weight-kg" inputmode="decimal" type="number" min="20" max="500" step="0.1" placeholder="65" aria-label="Weight in kilograms" /><em>kg</em></label></div>
+              <div class="field-stack imperial-fields is-hidden" id="imperial-fields"><div class="height-composite"><div class="composite-intro"><span class="field-icon">↕</span><span><b>Height</b><small>How tall are you?</small></span></div><label><input id="height-feet" inputmode="numeric" type="number" min="3" max="8" placeholder="5" aria-label="Height in feet" /><em>ft</em></label><label><input id="height-inches" inputmode="numeric" type="number" min="0" max="11" placeholder="7" aria-label="Height in inches" /><em>in</em></label></div><label class="measure-field"><span class="field-icon">⌁</span><span class="field-copy"><b>Weight</b><small>Your current weight</small></span><input id="weight-pounds" inputmode="decimal" type="number" min="45" max="1100" step="0.1" placeholder="143" aria-label="Weight in pounds" /><em>lb</em></label></div>
+              <p class="input-error is-hidden" id="input-error" role="alert">Enter a realistic height and weight to calculate your BMI.</p><button class="calculate-button" type="submit"><span class="sparkle">✦</span> Calculate my BMI <span class="arrow">↗</span></button>
+            </form>
+          </div>
+          <aside class="result-panel" id="result-panel" aria-live="polite"><div class="result-empty" id="result-empty"><span class="empty-gauge">⌒</span><p class="eyebrow"><span></span> Your result</p><h3>Ready when you are.</h3><p>Enter your height and weight to see your BMI and the usual range for your height.</p></div><div class="result-reveal is-hidden" id="result-content"><div class="result-overline"><span id="result-symbol">●</span> <span id="result-label"></span></div><div class="result-number"><span id="bmi-value"></span><small>BMI</small></div><h3 id="result-category"></h3><p class="result-note" id="result-note"></p><div class="healthy-weight"><span>Usual weight range for your height</span><strong id="healthy-range"></strong></div><button class="download-card" id="download-card" type="button"><span>↓</span> Download result card</button></div></aside>
+        </div>
+        <section class="range-section" aria-label="Standard BMI categories"><div class="range-heading"><div><p class="eyebrow"><span></span> Reading the scale</p><h3>The adult BMI range</h3></div><p>For most adults, a BMI from 18.5 to 24.9 is usually considered within the healthy range.</p></div><div class="range-ribbon-wrap"><div class="range-marker" id="range-marker" aria-hidden="true"><i></i><span id="marker-value"></span></div><div class="range-ribbon" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="range-labels"><span>Underweight <b>&lt;18.5</b></span><span>Healthy <b>18.5–24.9</b></span><span>Overweight <b>25–29.9</b></span><span>Obesity <b>30+</b></span></div></div></section>
+        <section class="history-section" aria-labelledby="history-title"><div class="history-heading"><div><p class="eyebrow"><span></span> Private record</p><h3 id="history-title">Your recent readings</h3></div><button id="clear-history" type="button" class="clear-history is-hidden">Clear history</button></div><p class="history-intro">Saved only in this browser. Your newest eight calculations are kept here.</p><ul class="history-list" id="history-list"></ul></section>
+        <footer class="calculator-footer"><span><span class="footprint">♧</span> A simple measure for a fuller picture.</span><a href="https://www.cdc.gov/bmi/about/index.html" target="_blank" rel="noreferrer">About BMI <span>?</span></a></footer>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
