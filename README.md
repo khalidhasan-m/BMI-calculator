@@ -4,13 +4,13 @@ A responsive BMI calculator built with **plain HTML, CSS, and JavaScript**. It r
 
 ## Use
 
-Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root.
+Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root. Switching between **Metric** and **Imperial** converts entered height and weight values, then clears the previous BMI result for recalculation in the active system.
 
 ## Features
 
 | Feature | Description |
 |---|---|
-| Metric and imperial input | Calculates BMI from centimetres/kilograms or feet/inches/pounds. |
+| Metric and imperial input | Calculates BMI from centimetres/kilograms or feet/inches/pounds. Switching units converts entered height and weight values instead of clearing them. |
 | BMI context | Shows the BMI value, category, usual height-adjusted weight range, and range-ribbon position. |
 | Local history | Keeps the eight newest calculations in the browser’s `localStorage`; no history is sent anywhere. |
 | Result-card download | Creates a PNG card from the current calculation using the browser’s Canvas API. |
