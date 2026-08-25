@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
 
-/* Vital Atelier design reminder: paper-like warmth, editorial asymmetry, and
+ /* Vital Atelier design reminder: paper-like warmth, editorial asymmetry, and
    Verdant Green precision. The vanilla CSS remains tactile and composed. */
+
+/* Vital Measure wordmark: a fully CSS-rendered, asset-independent header mark. */
+.brand-lockup .brand-seal { align-items: center; border: 1px solid currentColor; border-radius: 50% 50% 50% 7px; display: inline-flex; font-family: "DM Serif Display", serif; font-size: 19px; font-style: italic; font-weight: 400; height: 29px; justify-content: center; letter-spacing: 0; line-height: 1; position: relative; width: 29px; }.brand-lockup .brand-seal::after { background: #c97055; border-radius: 50%; content: ""; height: 5px; position: absolute; right: -3px; top: 2px; width: 5px; }.brand-lockup .brand-wordmark { display: flex; flex-direction: column; line-height: .8; }.brand-lockup .brand-wordmark b { font-family: "DM Serif Display", serif; font-size: 14px; font-weight: 400; letter-spacing: .16em; }.brand-lockup .brand-wordmark em { font-family: "DM Serif Display", serif; font-size: 15px; font-style: italic; font-weight: 400; letter-spacing: .01em; margin-left: 13px; margin-top: 4px; }
 
 :root { --ink: #263a32; --verdant: #315d4d; --oat: #f5f0e7; --paper: #fffdf7; --muted: #637269; --rule: rgba(49, 93, 77, .2); }
 * { box-sizing: border-box; }
