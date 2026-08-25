@@ -4,7 +4,7 @@ A responsive BMI calculator built with **plain HTML, CSS, and JavaScript**. It r
 
 ## Use
 
-Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root. Switching between **Metric** and **Imperial** converts entered height and weight values, then clears the previous BMI result for recalculation in the active system.
+Open `index.html` in any modern browser. The calculator runs directly from the three source files at the repository root. Switching between **Metric** and **Imperial** converts entered height and weight values, then clears the previous BMI result for recalculation in the active system. The language selector supports **English, Spanish, and French**, and remembers the selected language in the browser.
 
 ## Features
 
@@ -15,6 +15,7 @@ Open `index.html` in any modern browser. The calculator runs directly from the t
 | Local history | Keeps the eight newest calculations in the browser’s `localStorage`; no history is sent anywhere. |
 | Result-card download | Creates a PNG card from the current calculation using the browser’s Canvas API. |
 | Dark mode | Includes a persisted light/dark preference using `localStorage`. |
+| Localization | Provides English, Spanish, and French UI translations, including results, validation feedback, history labels, dates, PNG cards, and accessible labels. |
 | Responsive layout | Adapts the editorial two-column view for small screens. |
 
 ## Files
